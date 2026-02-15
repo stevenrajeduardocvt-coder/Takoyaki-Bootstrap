@@ -1237,3 +1237,95 @@ body { font-family: 'Montserrat', sans-serif; }
   display: flex;
   flex-direction: column;
 }
+/* --- Background & Heading Fixes --- */
+
+/* Change global background to dark charcoal for better contrast */
+body, .food_section, .about_section, .book_section {
+  background-color: #222831 !important; /* Matches your menu card color */
+  color: #ffffff;
+}
+
+/* Fix "Our Menu" Heading Visibility */
+.heading_container h2 {
+  color: var(--primary-red) !important; /* Signature Terracotta Red */
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a stylish underline to the heading */
+.heading_container.heading_center h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--primary-red);
+  margin: 10px auto 0;
+}
+
+/* Ensure filter menu text is visible on dark background */
+.food_section .filters_menu {
+  color: #ffffff;
+}
+
+.food_section .filters_menu li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.food_section .filters_menu li.active {
+  background-color: var(--primary-red) !important;
+}
+
+/* Adjust Menu Card Titles for dark theme */
+.food_section .box .detail-box h5 {
+  color: #ffffff !important;
+}
+
+.food_section .box .detail-box p {
+  color: #d1d1d1 !important;
+}
+/* 1. Force the background for the entire page and all main sections */
+body, 
+.sub_page, 
+.food_section, 
+.about_section, 
+.book_section, 
+footer {
+    background-color: #222831 !important;
+    color: #ffffff !important;
+}
+
+/* 2. Remove the white background from the top half of the menu cards */
+.food_section .box {
+    background-color: #222831 !important;
+    background: #222831 !important; /* Overrides any gradients */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+.food_section .box .img-box {
+    background-color: transparent !important;
+}
+
+/* 3. Ensure the Menu Heading is visible (Terracotta Red) */
+.heading_container h2 {
+    color: #A04035 !important;
+}
+
+/* 4. Fix Filter Menu visibility */
+.food_section .filters_menu li {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.food_section .filters_menu li.active {
+    background-color: #A04035 !important;
+    color: #ffffff;
+}
+
+/* 5. Fix the sub-page hero area (the top part with the navbar) */
+.sub_page .hero_area {
+    background-color: #222831 !important;
+}
